@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 
   int i;
   double res = 3;
-  for (i = 1; i < n + 1; i++)
+  for (i = 1; i <= n; i++)
   {
     double ii = i;
     res += ((i % 2 == 0) ? -1 : 1) *
