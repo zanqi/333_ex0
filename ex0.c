@@ -1,8 +1,12 @@
+// Copyright (c) 2025
 // Name: Zanqi Liang
 // Email: zanqil@uw.edu
 
 #include <stdio.h>  // printf
-#include <stdlib.h> // EXIT_SUCCESS
+#include <stdlib.h> // EXIT_SUCCESS, EXIT_FAILURE
+
+// Estimate pi with n terms
+double pi(long n);
 
 int main(int argc, char const *argv[])
 {
@@ -22,6 +26,12 @@ int main(int argc, char const *argv[])
     return EXIT_FAILURE;
   }
 
+  printf("Our estimate of Pi is %.20lf", pi(n));
+  return EXIT_SUCCESS;
+}
+
+double pi(long n)
+{
   int i;
   double res = 3;
   for (i = 1; i <= n; i++)
@@ -30,6 +40,5 @@ int main(int argc, char const *argv[])
     res += ((i % 2 == 0) ? -1 : 1) *
            (4 / (2 * ii * (2 * ii + 1) * (2 * ii + 2)));
   }
-  printf("Our estimate of Pi is %.20lf", res);
-  return EXIT_SUCCESS;
+  return res;
 }
