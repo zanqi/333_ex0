@@ -7,7 +7,7 @@
 #include <stdlib.h>  // EXIT_SUCCESS, EXIT_FAILURE
 
 // Estimate pi with n terms
-double pi(int64_t n);
+double Pi(int64_t n);
 
 int main(int argc, char const *argv[]) {
   if (argc != 2) {
@@ -23,11 +23,11 @@ int main(int argc, char const *argv[]) {
     return EXIT_FAILURE;
   }
 
-  printf("Our estimate of Pi is %.20lf", pi(n));
+  printf("Our estimate of Pi is %.20lf", Pi(n));
   return EXIT_SUCCESS;
 }
 
-double pi(int64_t n) {
+double Pi(int64_t n) {
   int i;
   double res = 3;
   for (i = 1; i <= n; i++) {
